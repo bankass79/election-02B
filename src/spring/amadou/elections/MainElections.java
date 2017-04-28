@@ -12,6 +12,8 @@ import java.util.Scanner;
 public class MainElections {
 
 	static List<ListeElectorale>listes= new ArrayList <ListeElectorale> ();
+	
+	private static final double barre =0.05;
 	public static void main(String[] args) throws IOException {
 
 		// Nombre de sieges à pouvoir
@@ -191,7 +193,7 @@ public class MainElections {
 
 		for (int i = 0; i <  elimineListe.length; i++) {
 
-			if (((voixListes[i]) * 1.0 / totalVoix) < 0.05) {
+			if (((voixListes[i]) * 1.0 / totalVoix) < barre) {
 
 				elimineListe[i] = true;
 
